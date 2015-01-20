@@ -1,0 +1,6 @@
+Pygments==2.0.2
+bpython==0.13.2
+mechanize==0.2.5
+requests==2.5.1
+selenium==2.44.0
+wsgiref==0.1.2
