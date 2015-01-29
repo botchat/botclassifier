@@ -39,13 +39,22 @@ class botdbConnection(object):
         INSERT INTO botquestion VALUES(3,'i like know more about you',0);
         INSERT INTO botquestion VALUES(4,'hi',0);
         CREATE TABLE botresponse(  
-             botresid INTEGER PRIMARY KEY,  
+             botresid INTEGER PRIMARY KEY ASC,  
              botres  TEXT,
-             botquesweight INTEGER,
-             forbotquesid INTEGER,
-             FOREIGN KEY(forbotquesid) DEFAULT 0 REFERENCES botquestion(botquesid) ON DELETE SET DEFAULT  
+             botresweight INTEGER,  
              );
-        INSERT INTO botresponse VALUES(1,'hi',1,4);
+        INSERT INTO botresponse VALUES(1,'hi',1);
+        INSERT INTO botresponse VALUES(1,'yes',2);
+        CREATE TABLE botquesres(
+            quesresid INTGER PRIMARY KEY ASC,
+            forbotresid INTEGER,
+            FOREIGN KEY(forbotresid) REFERENCES botresponse(botresid) ON DELETE CASCAD,
+            forbotquesid INTEGER,
+            FOREIGN KEY(forbotquesid) REFERENCES botquestion(botquesid) ON DELETE CASCAD
+        );
+        INSERT INTO botquesres VALUES(1,1,4);
+        INSERT INTO botquesres VALUES(2,2,2);
+        INSERT INTO botquesres VALUES(3,2,3);
         """)
-        
+        #TODO more   
     
