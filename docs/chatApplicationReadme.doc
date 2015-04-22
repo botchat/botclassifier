@@ -1,0 +1,25 @@
+Sample group chat application using Django-python
+
+
+1. version used :- django 1.7,  python2.7
+2. pre requisites :- All the user wnats to participate in chat should be connected in LAN connection.
+
+Introduction
+	It is sample real time chatting system for the users connected in LAN connection. System is fully designed using django-python framework, javascript, jquery and ajax. All the packages used for development are freely available so application is very much cost effective.
+
+Features developed
+	Only the registered user can participate in the chat.
+	Any user can register for the group chat (should be connected in LAN)
+	Fast, effective and secure chatting.
+
+How to run.
+	Download and extract djangoProject_version5.zip
+	cd sampleGroupChat
+	python manage.py runserver [IP of server machine] : [port for running django server]
+		eg. Python manage.py runserver 10.55.124.33:8000
+
+	And open browser and fire following url 
+	'IP_of_serverMachine:port/home/main'
+		eg. 10.55.124.33:8000/home/main
+
+Now sign up you with your friends and enjoy the free group chat.
